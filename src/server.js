@@ -31,6 +31,6 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp')))
 
 app.use(require('./routes'))
 
-server.listen(4100, () => {
+server.listen(process.env.PORT || 4100, () => {
     console.log('on port 4100')
 })
